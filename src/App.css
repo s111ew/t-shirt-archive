@@ -1,0 +1,6 @@
+.button-stylised {
+  border: 1px solid lightgray;
+}
+.button-stylised:hover {
+  background-color: lightcoral;
+}
