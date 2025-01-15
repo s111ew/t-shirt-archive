@@ -1,7 +1,7 @@
 function ButtonStylised({ text }) {
   return (
     <div className="button-stylised">
-      {text}
+      <span className="button-text">{text}</span>
     </div>
   )
 }

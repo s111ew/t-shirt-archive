@@ -1,6 +1,110 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "SF Pro", Arial, Helvetica, sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+html {
+  --light-grey: #f5f5f5;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+.navbar {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.navbar > h1 {
+  font-weight: 100;
+}
+@font-face {
+  font-family: "SF Pro";
+  src: url(./assets/fonts/SF-Pro-Display-Regular.otf);
+}
+.button-container {
+  display: flex;
+  gap: 10px;
+}
 .button-stylised {
-  border: 1px solid lightgray;
+  height: 35px;
+  position: relative;
+  border: 1.3px solid lightgray;
+  padding: 3px 7px 6px 7px;
+  border-radius: 3px;
+  box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.1),
+    0px 2px 3px 1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  transform-origin: bottom;
+  overflow: hidden;
+}
+.button-stylised:active {
+  transform: scaleY(0.9);
+  box-shadow: none;
 }
 .button-stylised:hover {
-  background-color: lightcoral;
+  background-color: var(--light-grey);
+  cursor: pointer;
+}
+.button-text {
+  display: inline-block;
+  font-size: 14px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.cell {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.cell > .shirt-image:hover ~ .description {
+  visibility: visible;
 }
