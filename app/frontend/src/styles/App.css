@@ -59,7 +59,7 @@ html {
 }
 @font-face {
   font-family: "SF Pro";
-  src: url(./assets/fonts/SF-Pro-Display-Regular.otf);
+  src: url(../assets/fonts/SF-Pro-Display-Regular.otf);
 }
 .button-container {
   display: flex;
